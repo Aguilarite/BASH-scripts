@@ -1,2 +1,2 @@
 # BASH-scripts
-Simple BASH scripts for automatisation tasks
+Simple scripts for automating tasks
