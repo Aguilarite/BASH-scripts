@@ -1,0 +1,14 @@
+#!/bin/sh
+
+#this code below gets all files from folder $folderInput and converts every video
+#(in folder should be only convertolbe videos), exports to $folderOutput and removes the source file
+
+$folderInput="<ENTER DIRECTORY HERE>"
+$folderOutput="<ENTER DIRECTORY HERE>"
+
+cd $folderInput/
+for filename in *; do
+  ffmpeg -n  -i $folderInput/$filename -vcodec libx264 -crf 20 -filter:v scale=1920:1080 -r 30 $folderOutput/$filename
+  rm $filename
+done
+cd
