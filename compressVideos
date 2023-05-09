@@ -1,5 +1,6 @@
 #!/bin/sh
 
+#ATTENTION: script requiers the ffmpeg installed
 #this code below gets all files from folder $folderInput and converts every video
 #(in folder should be only convertolbe videos), exports to $folderOutput and removes the source file
 
