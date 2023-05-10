@@ -2,7 +2,7 @@
 
 #ATTENTION: script requiers the ffmpeg installed. Official ffmpeg download page: https://ffmpeg.org/download.html
 #this code below gets all files from folder $folderInput and converts every video
-#(in folder should be only convertolbe videos), exports to $folderOutput and removes the source file
+#(in folder should be only convertolbe videos), exports to $folderOutput and removes the source file.
 
 $folderInput="<ENTER DIRECTORY HERE>"
 $folderOutput="<ENTER DIRECTORY HERE>"
@@ -13,3 +13,7 @@ for filename in *; do
   rm $filename
 done
 cd
+
+#Remark about the '-n' flag: with it, the script would not override files if in the output directory they already exist.
+#If you remove the '-n' flag, the script will try to communicate with admin to get an answer to the question about overriding.
+#If you want to override the files, change the '-n' to '-y'.
